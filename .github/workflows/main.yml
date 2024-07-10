@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: laurentbubba/lifeoverview:latest
+          tags: twolegboy123/lifeoverviewer:latest
           
       - name: deploying
         uses: appleboy/ssh-action@v0.1.8
@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            docker image pull laurentbubba/lifeoverview:latest
+            docker image pull twolegboy123/lifeoverviewer:latest
             docker container stop django
             docker container rm django
-            docker container run -d --name django -p 80:5000 laurentbubba/lifeoverview:latest
+            docker container run -d --name django -p 80:5000 twolegboy123/lifeoverviewer:latest
