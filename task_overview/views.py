@@ -4,4 +4,5 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Here will be the task and their inheritances overview ...")
+    return HttpResponse("I love my Genta! A BUNCH")
+    # return HttpResponse("Here will be the task and their inheritances overview ...")
