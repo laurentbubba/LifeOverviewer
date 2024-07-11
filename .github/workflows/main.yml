@@ -38,6 +38,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             docker image pull twolegboy123/lifeoverviewer:latest
-            docker container stop django
-            docker container rm django
-            docker container run -d --name django -p 80:5000 twolegboy123/lifeoverviewer:latest
+            docker container stop container-life-overviewer
+            docker container rm container-life-overviewer
+            docker container run -d --name container-life-overviewer -p 8000:8080 twolegboy123/lifeoverviewer:latest
