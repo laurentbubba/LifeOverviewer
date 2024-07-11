@@ -10,7 +10,7 @@ COPY . code
 EXPOSE 8000
 
 # Run by automateduser
-USER automateduser
+# USER automateduser
 
 # Run productionserver
 ENTRYPOINT ["python", "mysite/manage.py"]
