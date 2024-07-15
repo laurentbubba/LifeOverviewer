@@ -40,4 +40,4 @@ jobs:
             docker image pull twolegboy123/lifeoverviewer:latest
             docker container stop container-life-overviewer
             docker container rm container-life-overviewer
-            docker container run -d --name container-life-overviewer -e PIPELINE=production -e SECRET_KEY=bomba -p 8000:8080 twolegboy123/lifeoverviewer:latest
+            docker container run -d --name container-life-overviewer -p 8000:8080 twolegboy123/lifeoverviewer:latest
